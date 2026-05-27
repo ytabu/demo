@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block title %}ホーム | My Website{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <div class="hero-inner">
+    <h1>Welcome to My Website</h1>
+    <p>Flaskで作ったウェブサイトへようこそ。<br>シンプルで使いやすいサイトを目指しています。</p>
+    <a href="#features" class="btn">詳しく見る</a>
+  </div>
+</section>
+
+<section class="features" id="features">
+  <h2>特徴</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🚀</div>
+      <h3>高速</h3>
+      <p>Flaskの軽量な設計により、快適なレスポンスを実現しています。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎨</div>
+      <h3>シンプル</h3>
+      <p>すっきりとしたデザインで、誰でも使いやすいUIを提供します。</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🔧</div>
+      <h3>拡張性</h3>
+      <p>必要な機能を自由に追加できる柔軟な構成になっています。</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
