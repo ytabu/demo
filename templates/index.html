@@ -81,8 +81,9 @@
         <div class="step-number">2</div>
         <div class="step-body">
           <h3>Node.js をインストールする</h3>
-          <p>Claude Code の実行には Node.js（v18以上）が必要です。公式サイト（nodejs.org）からインストーラーをダウンロードして実行してください。</p>
-          <p>インストール後、PowerShell またはコマンドプロンプトで確認：</p>
+          <p>Claude Code の実行には Node.js（v18以上）が必要です。Windows 10/11 に標準搭載の <code>winget</code> でコマンド一発でインストールできます：</p>
+          <pre>winget install OpenJS.NodeJS</pre>
+          <p>インストール後、PowerShell を再起動してバージョン確認：</p>
           <pre>node -v
 npm -v</pre>
         </div>
