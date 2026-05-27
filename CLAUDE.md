@@ -18,6 +18,7 @@ A simple website built with Flask. The site renders server-side HTML templates
 ```
 .
 ├── app.py              # Flask app: loads .env, defines the "/" route
+├── Procfile            # Railway/Heroku start command (gunicorn)
 ├── requirements.txt    # Python dependencies
 ├── templates/
 │   ├── base.html       # Base layout (header nav, main, footer)
@@ -37,10 +38,16 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Run the development server (debug mode, http://127.0.0.1:5000):
+Run the development server (http://127.0.0.1:5000):
 
 ```bash
-python app.py
+python app.py          # set FLASK_DEBUG=true to enable the debugger
+```
+
+Run with the production server (gunicorn), as used on Railway:
+
+```bash
+gunicorn app:app --bind 0.0.0.0:$PORT
 ```
 
 ## Configuration
