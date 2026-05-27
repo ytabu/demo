@@ -321,6 +321,7 @@ section {
   padding: 1.8rem 2rem;
   box-shadow: 0 2px 12px rgba(0,0,0,0.06);
   border-left: 4px solid var(--green-main);
+  overflow: hidden;
 }
 
 .step-number {
@@ -339,6 +340,8 @@ section {
 
 .step-body {
   min-width: 0;
+  flex: 1 1 0;
+  overflow: hidden;
 }
 
 .step-body h3 {
@@ -378,6 +381,7 @@ section {
   margin-top: 0.6rem;
   overflow-x: auto;
   line-height: 1.6;
+  max-width: 100%;
 }
 
 /* ─── Bonus ───────────────────────────────────── */
