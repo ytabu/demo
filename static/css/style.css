@@ -341,6 +341,7 @@ section {
 .step-body {
   min-width: 0;
   flex: 1 1 0;
+  width: 100%;
 }
 
 .step-body h3 {
