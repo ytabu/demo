@@ -3,32 +3,175 @@
 {% block title %}ホーム | tabu's Website{% endblock %}
 
 {% block content %}
+
+<!-- Hero -->
 <section class="hero">
   <div class="hero-inner">
-    <h1>Built with Claude Code</h1>
-    <p>このサイトは Claude Code を使って開発されています。<br>AIとペアプログラミングすることで、アイデアを素早く形にできます。</p>
-    <a href="#features" class="btn">詳しく見る</a>
+    <div class="hero-badge">お勉強用デモサイト</div>
+    <h1>AIと一緒に、<br><span>コードを書く。</span></h1>
+    <p>このサイトは Claude Code を使って開発されました。<br>
+       自然言語で指示するだけで、実装からデプロイまで。</p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn btn-primary">サイトについて</a>
+      <a href="#setup" class="btn btn-secondary">設定方法を見る</a>
+    </div>
   </div>
 </section>
 
-<section class="features" id="features">
-  <h2>Claude Code でできること</h2>
-  <div class="cards">
-    <div class="card">
-      <div class="card-icon">⚡</div>
-      <h3>高速開発</h3>
-      <p>コードの生成・修正・デバッグをAIと一緒に進めることで、開発スピードが大幅に向上します。</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">💡</div>
-      <h3>自然言語で指示</h3>
-      <p>「〇〇を変えて」と伝えるだけで、AIが実装・コミット・プッシュまで担当します。</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🔀</div>
-      <h3>Git連携</h3>
-      <p>ブランチの作成からPRの作成まで、Gitワークフロー全体をAIがサポートします。</p>
+<!-- About -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <p class="section-label">\ About this site /</p>
+    <h2 class="section-title"><span>Claude Code</span> とは？</h2>
+    <p class="section-desc">
+      Anthropicが提供するAIペアプログラマー。<br>
+      ターミナルから自然言語で指示するだけで、コードの生成・修正・コミット・PRまで担当します。
+    </p>
+    <div class="about-body">
+      <div class="about-text">
+        <p>Claude Code はエディタに統合されたAIアシスタントではなく、<strong>ターミナル上で動くエージェント</strong>です。プロジェクト全体のファイルを読み書きしながら、複数のファイルにまたがる変更も一気に実行できます。</p>
+        <p>このサイト自体も Claude Code を通じてデザイン・コーディング・Gitコミット・GitHub PRの作成をすべてAIに指示しながら構築しました。</p>
+        <p>開発ツールとしてだけでなく、<strong>アイデアを素早く形にする相棒</strong>として活用できます。</p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">💬</div>
+          <div>
+            <h4>自然言語で指示</h4>
+            <p>「緑系のデザインにして」「設定方法のページを追加して」で完結</p>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🗂️</div>
+          <div>
+            <h4>ファイル横断で操作</h4>
+            <p>HTML・CSS・Pythonを横断した変更も一発で対応</p>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🔀</div>
+          <div>
+            <h4>Git連携</h4>
+            <p>コミット・ブランチ・PRの作成までAIが実行</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Setup -->
+<section class="setup" id="setup">
+  <div class="section-inner">
+    <p class="section-label">Setup Guide</p>
+    <h2 class="section-title">設定方法</h2>
+    <p class="section-desc">Windows に Claude Code をインストールして使い始めるまでの手順です。</p>
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-body">
+          <h3>Anthropic アカウントを作成する</h3>
+          <p>claude.ai にアクセスしてアカウントを作成します。Claude Code を使うには <strong>Pro プラン以上</strong>（月額 $20〜）へのサブスクリプションが必要です。</p>
+          <p>または Anthropic Console からAPIキーを発行してAPIプランで利用することもできます。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-body">
+          <h3>Node.js をインストールする</h3>
+          <p>Claude Code の実行には Node.js（v18以上）が必要です。Windows 10/11 に標準搭載の <code>winget</code> を使えばコマンド一発でインストールできます。スタートメニューで「PowerShell」と検索して起動し、以下を実行してください：</p>
+          <pre>winget install OpenJS.NodeJS</pre>
+          <p>インストール後、PowerShell を一度閉じて再起動し、バージョン確認：</p>
+          <pre>node -v
+npm -v</pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-body">
+          <h3>Claude Code をインストールする</h3>
+          <p>npm でグローバルインストールします。PowerShell（管理者権限）で実行してください：</p>
+          <pre>npm install -g @anthropic-ai/claude-code</pre>
+          <p>インストール後、バージョン確認：</p>
+          <pre>claude --version</pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-body">
+          <h3>認証する</h3>
+          <p>プロジェクトフォルダに移動して <code>claude</code> を初回起動すると、ブラウザが開いて Anthropic アカウントでのログイン画面が表示されます。</p>
+          <pre>cd あなたのプロジェクトフォルダ
+claude</pre>
+          <p>ブラウザで認証を完了すると、ターミナルの Claude Code セッションが開始します。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-body">
+          <h3>使い始める</h3>
+          <p>セッションが開始したら、日本語で自由に指示できます。最初は何もない空のフォルダでOKです。例えば：</p>
+          <pre>Pythonで簡単なWebページを作りたい。必要なファイルを作成して</pre>
+          <p>Claude Code がファイル構成を考えてコードを生成してくれます。慣れてきたら「デザインを緑系にして」「お問い合わせページを追加して」のように変更を重ねていけます。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Bonus -->
+<section class="bonus" id="bonus">
+  <div class="section-inner">
+    <p class="section-label">Bonus</p>
+    <h2 class="section-title">おまけ：このページの自動公開の仕組み</h2>
+    <p class="section-desc">
+      このページは Claude Code・GitHub・Railway の3つを連携させることで、<br>
+      コードを書いてから公開まで<strong>ほぼ自動</strong>で完結しています。
+    </p>
+    <div class="bonus-flow">
+
+      <div class="bonus-item">
+        <div class="bonus-icon">🤖</div>
+        <div class="bonus-body">
+          <h3>Claude Code</h3>
+          <p class="bonus-role">コードを書く・変更する</p>
+          <p>ターミナル上で動くAIエージェント。「デザインを緑にして」「設定方法を追加して」など自然言語で指示すると、HTML・CSS・Pythonを横断してコードを修正し、Gitコミット・PRの作成まで実行します。</p>
+        </div>
+      </div>
+
+      <div class="bonus-arrow">↓</div>
+
+      <div class="bonus-item">
+        <div class="bonus-icon">🐙</div>
+        <div class="bonus-body">
+          <h3>GitHub</h3>
+          <p class="bonus-role">コードを管理・マージする</p>
+          <p>ソースコードのホスティングサービス。Claude Code が作成したPR（プルリクエスト）をブラウザ上で確認してマージするだけで、最新コードが <code>master</code> ブランチに反映されます。</p>
+        </div>
+      </div>
+
+      <div class="bonus-arrow">↓</div>
+
+      <div class="bonus-item">
+        <div class="bonus-icon">🚂</div>
+        <div class="bonus-body">
+          <h3>Railway</h3>
+          <p class="bonus-role">自動でビルド・公開する</p>
+          <p>GitHubリポジトリと連携したホスティングサービス。<code>master</code> ブランチへのマージを検知すると自動でビルドが走り、数分以内に本番環境へ反映されます。サーバー管理は不要です。</p>
+        </div>
+      </div>
+
+    </div>
+    <p class="bonus-summary">
+      つまり「AIに指示 → PRをマージ」の2ステップだけで、このページは更新・公開されています。
+    </p>
+  </div>
+</section>
+
 {% endblock %}
