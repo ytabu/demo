@@ -3,32 +3,151 @@
 {% block title %}ホーム | tabu's Website{% endblock %}
 
 {% block content %}
+
+<!-- Hero -->
 <section class="hero">
   <div class="hero-inner">
-    <h1>Built with Claude Code</h1>
-    <p>このサイトは Claude Code を使って開発されています。<br>AIとペアプログラミングすることで、アイデアを素早く形にできます。</p>
-    <a href="#features" class="btn">詳しく見る</a>
+    <div class="hero-badge">Claude Code × Flask</div>
+    <h1>AIと一緒に、<br><span>コードを書く。</span></h1>
+    <p>このサイトは Claude Code を使って開発されました。<br>
+       自然言語で指示するだけで、実装からデプロイまで。</p>
+    <div class="hero-buttons">
+      <a href="#about" class="btn btn-primary">サイトについて</a>
+      <a href="#setup" class="btn btn-secondary">設定方法を見る</a>
+    </div>
   </div>
 </section>
 
-<section class="features" id="features">
-  <h2>Claude Code でできること</h2>
-  <div class="cards">
-    <div class="card">
-      <div class="card-icon">⚡</div>
-      <h3>高速開発</h3>
-      <p>コードの生成・修正・デバッグをAIと一緒に進めることで、開発スピードが大幅に向上します。</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">💡</div>
-      <h3>自然言語で指示</h3>
-      <p>「〇〇を変えて」と伝えるだけで、AIが実装・コミット・プッシュまで担当します。</p>
-    </div>
-    <div class="card">
-      <div class="card-icon">🔀</div>
-      <h3>Git連携</h3>
-      <p>ブランチの作成からPRの作成まで、Gitワークフロー全体をAIがサポートします。</p>
+<!-- About -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <p class="section-label">\ About this site /</p>
+    <h2 class="section-title"><span>Claude Code</span> とは？</h2>
+    <p class="section-desc">
+      Anthropicが提供するAIペアプログラマー。<br>
+      ターミナルから自然言語で指示するだけで、コードの生成・修正・コミット・PRまで担当します。
+    </p>
+    <div class="about-body">
+      <div class="about-text">
+        <p>Claude Code はエディタに統合されたAIアシスタントではなく、<strong>ターミナル上で動くエージェント</strong>です。プロジェクト全体のファイルを読み書きしながら、複数のファイルにまたがる変更も一気に実行できます。</p>
+        <p>このサイト自体も Claude Code を通じてデザイン・コーディング・Gitコミット・GitHub PRの作成をすべてAIに指示しながら構築しました。</p>
+        <p>開発ツールとしてだけでなく、<strong>アイデアを素早く形にする相棒</strong>として活用できます。</p>
+      </div>
+      <div class="about-highlights">
+        <div class="highlight-item">
+          <div class="highlight-icon">💬</div>
+          <div>
+            <h4>自然言語で指示</h4>
+            <p>「緑系のデザインにして」「設定方法のページを追加して」で完結</p>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🗂️</div>
+          <div>
+            <h4>ファイル横断で操作</h4>
+            <p>HTML・CSS・Pythonを横断した変更も一発で対応</p>
+          </div>
+        </div>
+        <div class="highlight-item">
+          <div class="highlight-icon">🔀</div>
+          <div>
+            <h4>Git連携</h4>
+            <p>コミット・ブランチ・PRの作成までAIが実行</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
+<!-- Features -->
+<section class="features" id="features">
+  <div class="section-inner">
+    <p class="section-label">Features</p>
+    <h2 class="section-title">できること</h2>
+    <p class="section-desc">Claude Code があれば、コーディング経験が少なくてもWebサービスを作れます。</p>
+    <div class="cards">
+      <div class="card">
+        <span class="card-icon">⚡</span>
+        <h3>高速開発</h3>
+        <p>「〇〇を作って」と伝えるだけで雛形から実装まで。試行錯誤のスピードが劇的に上がります。</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🐛</span>
+        <h3>デバッグ支援</h3>
+        <p>エラーメッセージを貼り付けるだけで原因を特定し、修正コードを提案・適用します。</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🚀</span>
+        <h3>デプロイまで一貫</h3>
+        <p>Railwayなどのホスティング設定もAIが構成ファイルを生成・修正して対応します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Setup -->
+<section class="setup" id="setup">
+  <div class="section-inner">
+    <p class="section-label">Setup Guide</p>
+    <h2 class="section-title">設定方法</h2>
+    <p class="section-desc">Windows に Claude Code をインストールして使い始めるまでの手順です。</p>
+    <div class="steps">
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-body">
+          <h3>Anthropic アカウントを作成する</h3>
+          <p>claude.ai にアクセスしてアカウントを作成します。Claude Code を使うには <strong>Pro プラン以上</strong>（月額 $20〜）へのサブスクリプションが必要です。</p>
+          <p>または Anthropic Console からAPIキーを発行してAPIプランで利用することもできます。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-body">
+          <h3>Node.js をインストールする</h3>
+          <p>Claude Code の実行には Node.js（v18以上）が必要です。公式サイト（nodejs.org）からインストーラーをダウンロードして実行してください。</p>
+          <p>インストール後、PowerShell またはコマンドプロンプトで確認：</p>
+          <pre>node -v
+npm -v</pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-body">
+          <h3>Claude Code をインストールする</h3>
+          <p>npm でグローバルインストールします。PowerShell（管理者権限）で実行してください：</p>
+          <pre>npm install -g @anthropic-ai/claude-code</pre>
+          <p>インストール後、バージョン確認：</p>
+          <pre>claude --version</pre>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-body">
+          <h3>認証する</h3>
+          <p>プロジェクトフォルダに移動して <code>claude</code> を初回起動すると、ブラウザが開いて Anthropic アカウントでのログイン画面が表示されます。</p>
+          <pre>cd あなたのプロジェクトフォルダ
+claude</pre>
+          <p>ブラウザで認証を完了すると、ターミナルの Claude Code セッションが開始します。</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-body">
+          <h3>使い始める</h3>
+          <p>セッションが開始したら、日本語で自由に指示できます。例えば：</p>
+          <pre>index.htmlのデザインを緑系にして、カードを3枚追加して</pre>
+          <p>Claude Code がコードを読み取り、変更を提案・適用します。Git リポジトリがあればコミット・プッシュ・PR作成まで依頼できます。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 {% endblock %}
