@@ -337,6 +337,10 @@ section {
   font-size: 1.1rem;
 }
 
+.step-body {
+  min-width: 0;
+}
+
 .step-body h3 {
   font-size: 1.05rem;
   font-weight: 700;
