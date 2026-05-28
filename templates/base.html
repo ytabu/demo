@@ -11,9 +11,10 @@
     <nav>
       <a href="{{ url_for('index') }}" class="logo">tabu's Website</a>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#setup">Setup</a></li>
-        <li><a href="#bonus">Bonus</a></li>
+        <li><a href="{{ url_for('index') }}#about">About</a></li>
+        <li><a href="{{ url_for('index') }}#setup">Setup</a></li>
+        <li><a href="{{ url_for('index') }}#bonus">Bonus</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
       </ul>
     </nav>
   </header>
