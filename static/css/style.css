@@ -559,6 +559,12 @@ section {
   max-width: 640px;
 }
 
+.dummy-note {
+  color: #c0392b;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
 .flash-success {
   background: #e8f8ef;
   border: 1px solid #abebc6;
