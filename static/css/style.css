@@ -389,6 +389,22 @@ section {
   background: #fff;
 }
 
+.bonus-diagram {
+  max-width: 780px;
+  margin: 0 auto 3rem;
+  background: #fff;
+  border: 1px solid var(--green-light);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.bonus-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .bonus-flow {
   display: flex;
   flex-direction: column;
