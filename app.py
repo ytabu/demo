@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from dotenv import load_dotenv
 import os
 
@@ -10,7 +10,7 @@ app.secret_key = os.getenv("SECRET_KEY", "dev-secret-key")
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_template("index.html", page_url=request.url)
 
 
 if __name__ == "__main__":

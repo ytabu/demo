@@ -174,4 +174,40 @@ claude</pre>
   </div>
 </section>
 
+<!-- Share -->
+<section class="share">
+  <div class="section-inner">
+    <p class="section-label">Share</p>
+    <h2 class="section-title">このページをシェア</h2>
+    <div class="share-buttons">
+      <a class="share-btn share-x" href="https://twitter.com/intent/tweet?url={{ page_url }}&text=Claude+Codeでサイトを作ってみた！" target="_blank" rel="noopener">
+        <span class="share-icon">𝕏</span>
+        <span>X でシェア</span>
+      </a>
+      <a class="share-btn share-line" href="https://social-plugins.line.me/lineit/share?url={{ page_url }}" target="_blank" rel="noopener">
+        <span class="share-icon">LINE</span>
+        <span>LINE で送る</span>
+      </a>
+      <a class="share-btn share-fb" href="https://www.facebook.com/sharer/sharer.php?u={{ page_url }}" target="_blank" rel="noopener">
+        <span class="share-icon">f</span>
+        <span>Facebook</span>
+      </a>
+      <button class="share-btn share-copy" onclick="copyUrl()">
+        <span class="share-icon">🔗</span>
+        <span id="copy-label">リンクをコピー</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<script>
+function copyUrl() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    var label = document.getElementById('copy-label');
+    label.textContent = 'コピーしました！';
+    setTimeout(function() { label.textContent = 'リンクをコピー'; }, 2000);
+  });
+}
+</script>
+
 {% endblock %}

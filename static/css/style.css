@@ -468,6 +468,51 @@ section {
   margin: 0 auto;
 }
 
+/* ─── Share ───────────────────────────────────── */
+.share {
+  background: var(--green-pale);
+  padding: 3.5rem 1.5rem;
+}
+
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.share-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.share-icon {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.share-x    { background: #000; color: #fff; }
+.share-line { background: #06c755; color: #fff; }
+.share-fb   { background: #1877f2; color: #fff; }
+.share-copy { background: #fff; color: var(--green-dark); border: 2px solid var(--green-light); }
+
 /* ─── Footer ──────────────────────────────────── */
 footer {
   background-color: var(--green-dark);
