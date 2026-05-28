@@ -13,6 +13,11 @@ def index():
     return render_template("index.html", page_url=request.url)
 
 
+@app.route("/privacy")
+def privacy():
+    return render_template("privacy.html")
+
+
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "5000"))
     debug = os.getenv("FLASK_DEBUG", "false").lower() == "true"

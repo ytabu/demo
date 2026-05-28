@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}プライバシーポリシー | tabu's Website{% endblock %}
+
+{% block content %}
+<style>
+  .privacy-body h2 { font-size: 1.1rem; }
+</style>
+<section class="privacy-body section-inner" style="max-width: 800px; margin: 4rem auto; padding: 0 1.5rem;">
+  <h1>プライバシーポリシー</h1>
+  <p style="color: var(--text-muted, #888); margin-bottom: 2rem;">最終更新日：2026年5月28日</p>
+
+  <h2>1. はじめに</h2>
+  <p>tabu's Website（以下「本サイト」）は、訪問者のプライバシーを尊重します。本ポリシーでは、本サイトが収集する情報とその取り扱いについて説明します。</p>
+
+  <h2>2. 収集する情報</h2>
+  <p>本サイトは以下の情報を自動的に収集する場合があります。</p>
+  <p>アクセスログ（IPアドレス、ブラウザの種類、アクセス日時、参照元URL）</p>
+  <p>氏名・メールアドレス等の個人情報を入力するフォームは現在存在しません。</p>
+
+  <h2>3. 情報の利用目的</h2>
+  <p>収集した情報は、サイトの運営状況の把握および改善のみに使用します。第三者への提供は行いません。</p>
+
+  <h2>4. Cookie について</h2>
+  <p>本サイトは現時点でトラッキング目的の Cookie を使用していません。</p>
+
+  <h2>5. 外部リンク</h2>
+  <p>本サイトには外部サービス（X、LINE、Facebook 等）へのリンクが含まれます。リンク先のプライバシーポリシーについては各サービスの規約をご確認ください。</p>
+
+  <h2>6. ポリシーの変更</h2>
+  <p>本ポリシーは予告なく変更される場合があります。変更後は本ページに最新版を掲載します。</p>
+
+  <h2>7. お問い合わせ</h2>
+  <p>本ポリシーに関するご質問は、サイト管理者までお問い合わせください。</p>
+
+  <p style="margin-top: 3rem;"><a href="{{ url_for('index') }}">&larr; トップページに戻る</a></p>
+</section>
+{% endblock %}
