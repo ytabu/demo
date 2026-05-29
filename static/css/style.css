@@ -5,11 +5,11 @@
 }
 
 :root {
-  --green-dark:  #1a2a3a;
-  --green-main:  #2980b9;
-  --green-light: #d6eaf8;
-  --green-pale:  #eaf4fb;
-  --text-dark:   #1a2433;
+  --green-dark:  #1a3a2a;
+  --green-main:  #27ae60;
+  --green-light: #e8f5e9;
+  --green-pale:  #f0f7f2;
+  --text-dark:   #1a2e1a;
   --text-mid:    #444;
   --text-light:  #777;
 }
@@ -69,7 +69,7 @@ nav .nav-links a:hover {
 
 /* ─── Hero ────────────────────────────────────── */
 .hero {
-  background: linear-gradient(135deg, var(--green-dark) 0%, #1a5276 50%, var(--green-main) 100%);
+  background: linear-gradient(135deg, var(--green-dark) 0%, #2e7d52 50%, var(--green-main) 100%);
   color: #fff;
   text-align: center;
   padding: 7rem 1.5rem 5rem;
@@ -111,7 +111,7 @@ nav .nav-links a:hover {
 }
 
 .hero h1 span {
-  color: #aed6f1;
+  color: #a8e6bf;
 }
 
 .hero p {
@@ -372,8 +372,8 @@ section {
 }
 
 .step-body pre {
-  background: #1a2433;
-  color: #aed6f1;
+  background: #1a2e1a;
+  color: #a8e6bf;
   border-radius: 8px;
   padding: 0.9rem 1.2rem;
   font-family: "SFMono-Regular", Consolas, monospace;
@@ -531,7 +531,7 @@ section {
 
 /* ─── Contact CTA ─────────────────────────────── */
 .contact-cta {
-  background: linear-gradient(135deg, var(--green-dark) 0%, #1a5276 50%, var(--green-main) 100%);
+  background: linear-gradient(135deg, var(--green-dark) 0%, #2e7d52 50%, var(--green-main) 100%);
   color: #fff;
   text-align: center;
 }
